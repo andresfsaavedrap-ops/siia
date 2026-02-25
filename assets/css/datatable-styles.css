@@ -1,0 +1,704 @@
+/* Estilos consolidados para DataTables */
+
+/* Estilos base para botones de DataTables */
+.dt-buttons {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.dt-button {
+    margin: 0 0.25rem 0.5rem 0;
+    border-radius: 0.35rem !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dt-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.dt-button:active {
+    transform: translateY(0);
+}
+
+/* Estilos de botones por tipo */
+.dt-button.btn-primary {
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    border: none;
+}
+
+.dt-button.btn-success {
+    background: linear-gradient(45deg, #56ab2f 0%, #a8e6cf 100%);
+    border: none;
+}
+
+.dt-button.btn-danger {
+    background: linear-gradient(45deg, #ff416c 0%, #ff4b2b 100%);
+    border: none;
+}
+
+.dt-button.btn-info {
+    background: linear-gradient(45deg, #2196F3 0%, #21CBF3 100%);
+    border: none;
+}
+
+.dt-button.btn-secondary {
+    background: linear-gradient(45deg, #6c757d 0%, #495057 100%);
+    border: none;
+}
+
+/* ESTILOS MEJORADOS SIN BORDES NI SOMBRAS */
+
+/* Contenedor principal de DataTables - SIN bordes ni sombras */
+.dataTables_wrapper {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+/* Tabla principal - SIN bordes adicionales */
+.dataTables_wrapper .table {
+    margin-bottom: 0 !important;
+    border: none;
+    box-shadow: none;
+}
+
+/* Información de la tabla - Espaciado mejorado SIN fondos */
+.dataTables_info {
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+    padding: 1rem 0 !important;
+    color: #6c757d;
+    font-size: 0.875rem;
+    text-align: center;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Paginación - Espaciado muy mejorado SIN fondos */
+.dataTables_paginate {
+    margin-top: 2.5rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 1.5rem 0 !important;
+    text-align: center;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Botones de paginación - Estilo limpio */
+.dataTables_paginate .paginate_button {
+    margin: 0 0.25rem;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 0.375rem;
+    border: 1px solid #dee2e6;
+    background-color: #fff;
+    color: #495057;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: none;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    color: #495057;
+    box-shadow: none;
+    transform: none;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.dataTables_paginate .paginate_button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Selector de longitud - SIN fondos */
+.dataTables_length {
+    margin-bottom: 1rem !important;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.dataTables_length select {
+    margin: 0 0.5rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+}
+
+/* Filtro de búsqueda - SIN fondos */
+.dataTables_filter {
+    margin-bottom: 1rem !important;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: right;
+}
+
+.dataTables_filter input {
+    margin-left: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid #ced4da;
+    width: 200px;
+    background-color: #fff;
+}
+
+/* Scroll horizontal - Espaciado muy mejorado */
+.dataTables_scrollHead {
+    margin-bottom: 0;
+}
+
+.dataTables_scrollBody {
+    margin: 0;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    overflow-x: auto; /* Restaurar scroll horizontal */
+    -webkit-overflow-scrolling: touch;
+}
+
+.dataTables_scrollFoot {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.dataTables_scroll {
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    overflow-x: auto; /* Asegurar scroll horizontal */
+}
+
+/* Separación específica entre scroll y paginación */
+.dataTables_wrapper .dataTables_scroll + .row {
+    margin-top: 2rem !important; /* Reducir espaciado */
+}
+
+/* Celdas de la tabla - Espaciado interno mejorado */
+.table td,
+.table th {
+    padding: 0.875rem !important;
+    vertical-align: middle;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+}
+
+/* Tablas responsivas - SIN sombras */
+.table-responsive {
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+/* Espaciado para dispositivos móviles */
+@media (max-width: 768px) {
+    .dataTables_wrapper {
+        padding: 0;
+    }
+    
+    .dataTables_info {
+        margin-top: 2rem !important;
+        padding: 1rem 0 !important;
+    }
+    
+    .dataTables_paginate {
+        margin-top: 3rem !important;
+        padding: 1.5rem 0 !important;
+    }
+    
+    .dataTables_length,
+    .dataTables_filter {
+        margin-bottom: 1rem !important;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .dataTables_filter input {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Separación entre elementos del wrapper */
+.dataTables_wrapper .row {
+    margin: 0;
+}
+
+.dataTables_wrapper .col-sm-12,
+.dataTables_wrapper .col-md-6 {
+    padding: 0.25rem;
+}
+
+/* Espaciado específico entre scroll horizontal y controles inferiores */
+.dataTables_wrapper .dataTables_scroll {
+    margin-bottom: 2rem;
+}
+
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+    clear: both;
+    margin-top: 2rem;
+}
+
+/* Responsive design mejorado */
+@media (max-width: 768px) {
+    .dt-buttons {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .dt-button {
+        margin: 0.25rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.875rem;
+    }
+    
+    .dataTables_paginate,
+    .dataTables_info {
+        margin-top: 2rem !important;
+        padding-top: 1rem;
+        text-align: center;
+    }
+}
+
+/* Estilos adicionales para consistencia */
+.avatar-sm {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-shape {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+}
+
+.bg-gradient-success {
+    background: linear-gradient(87deg, #2dce89 0, #2dcecc 100%) !important;
+}
+
+.bg-gradient-info {
+    background: linear-gradient(87deg, #11cdef 0, #1171ef 100%) !important;
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(87deg, #fb6340 0, #fbb140 100%) !important;
+}
+
+.border-0 {
+    border: 0 !important;
+}
+
+.dt-button.btn-outline-secondary {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    background: transparent;
+}
+
+.dt-button.btn-outline-primary {
+    border: 2px solid #667eea;
+    color: #667eea;
+    background: transparent;
+}
+
+.dt-button.btn-outline-secondary:hover,
+.dt-button.btn-outline-primary:hover {
+    color: white;
+    background: #6c757d;
+}
+
+/* Estilos para dropdown de botones */
+.dt-button-collection {
+    border-radius: 0.5rem !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+    border: none !important;
+}
+
+.dt-button-collection .dt-button {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    padding: 0.75rem 1.25rem;
+}
+
+.dt-button-collection .dt-button:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.dt-button-collection .dt-button:first-child {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.dt-button-collection .dt-button:last-child {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+/* Estilos para agrupación de filas */
+tr.group {
+    background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+tr.group:hover {
+    background: linear-gradient(45deg, #e9ecef 0%, #dee2e6 100%) !important;
+    transform: scale(1.01);
+}
+
+tr.group td {
+    padding: 1rem !important;
+    border-top: 2px solid #dee2e6 !important;
+    border-bottom: 2px solid #dee2e6 !important;
+}
+
+/* Estilos para separación de paginación */
+.dataTables_paginate {
+    margin-top: 1.5rem !important;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.dataTables_info {
+    margin-top: 1.5rem !important;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.dataTables_scroll {
+    margin-bottom: 1rem;
+    overflow-x: auto; /* Asegurar scroll horizontal */
+}
+
+/* Tabla responsive CON scroll cuando sea necesario */
+.table-responsive {
+    margin-bottom: 1rem;
+    border: none !important;
+    border-radius: 0.375rem;
+    overflow-x: auto; /* Restaurar scroll horizontal automático */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Mejorar el comportamiento del scroll */
+.dataTables_wrapper .table {
+    min-width: 100%; /* Restaurar min-width para forzar scroll cuando sea necesario */
+    table-layout: auto;
+}
+
+/* Permitir que las celdas mantengan su contenido */
+.table td, .table th {
+    white-space: nowrap; /* Evitar salto de línea para mantener estructura */
+    word-wrap: break-word;
+    max-width: none;
+}
+
+/* Para dispositivos móviles, asegurar scroll */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto !important;
+    }
+    
+    .dataTables_scrollBody {
+        overflow-x: auto !important;
+    }
+    
+    .table td, .table th {
+        min-width: 120px;
+        white-space: nowrap;
+    }
+}
+
+/* Responsive para botones */
+@media (max-width: 768px) {
+    .dt-buttons {
+        text-align: center;
+    }
+    
+    .dt-button {
+        margin: 0.25rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.875rem;
+    }
+    
+    .dataTables_paginate,
+    .dataTables_info {
+        margin-top: 1rem !important;
+        padding-top: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* Estilos adicionales para consistencia */
+.avatar-sm {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-shape {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+}
+
+.bg-gradient-success {
+    background: linear-gradient(87deg, #2dce89 0, #2dcecc 100%) !important;
+}
+
+.bg-gradient-info {
+    background: linear-gradient(87deg, #11cdef 0, #1171ef 100%) !important;
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(87deg, #fb6340 0, #fbb140 100%) !important;
+}
+
+.border-0 {
+    border: 0 !important;
+}
+
+/* AJUSTE AUTOMÁTICO DE COLUMNAS */
+
+/* Permitir que las columnas se ajusten al contenido */
+.dataTables_wrapper .table {
+    width: auto !important;
+    table-layout: auto;
+}
+
+/* Ajuste automático para celdas */
+.dataTables_wrapper .table td,
+.dataTables_wrapper .table th {
+    width: auto;
+    white-space: nowrap;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Para contenido largo, permitir wrap en columnas específicas */
+.dataTables_wrapper .table td.wrap-content,
+.dataTables_wrapper .table th.wrap-content {
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 200px;
+}
+
+/* Columnas de acciones más compactas */
+.dataTables_wrapper .table td.actions-column,
+.dataTables_wrapper .table th.actions-column {
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Columnas de ID más pequeñas */
+.dataTables_wrapper .table td.id-column,
+.dataTables_wrapper .table th.id-column {
+    width: 60px;
+    text-align: center;
+}
+
+/* Columnas de fecha compactas */
+.dataTables_wrapper .table td.date-column,
+.dataTables_wrapper .table th.date-column {
+    width: 120px;
+    text-align: center;
+}
+
+/* Columnas de estado compactas */
+.dataTables_wrapper .table td.status-column,
+.dataTables_wrapper .table th.status-column {
+    width: 100px;
+    text-align: center;
+}
+
+/* Responsive: en móviles permitir wrap */
+@media (max-width: 768px) {
+    .dataTables_wrapper .table td,
+    .dataTables_wrapper .table th {
+        white-space: normal;
+        word-wrap: break-word;
+    }
+}
+
+.dt-button.btn-outline-secondary:hover,
+.dt-button.btn-outline-primary:hover {
+    color: white;
+    background: #6c757d;
+}
+
+/* Estilos para dropdown de botones */
+.dt-button-collection {
+    border-radius: 0.5rem !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+    border: none !important;
+}
+
+.dt-button-collection .dt-button {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    padding: 0.75rem 1.25rem;
+}
+
+.dt-button-collection .dt-button:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.dt-button-collection .dt-button:first-child {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.dt-button-collection .dt-button:last-child {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+/* Estilos para agrupación de filas */
+tr.group {
+    background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+tr.group:hover {
+    background: linear-gradient(45deg, #e9ecef 0%, #dee2e6 100%) !important;
+    transform: scale(1.01);
+}
+
+tr.group td {
+    padding: 1rem !important;
+    border-top: 2px solid #dee2e6 !important;
+    border-bottom: 2px solid #dee2e6 !important;
+}
+
+/* Estilos para separación de paginación */
+.dataTables_paginate {
+    margin-top: 1.5rem !important;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.dataTables_info {
+    margin-top: 1.5rem !important;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.dataTables_scroll {
+    margin-bottom: 1rem;
+    overflow-x: auto; /* Asegurar scroll horizontal */
+}
+
+/* Estilos para el botón de expansión responsive */
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+    background-color: #007bff;
+    border: 2px solid white;
+    border-radius: 14px;
+    box-shadow: 0 0 3px #444;
+    box-sizing: content-box;
+    color: white;
+    content: '+';
+    cursor: pointer;
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: bold;
+    height: 14px;
+    left: 4px;
+    line-height: 14px;
+    margin: -9px 0;
+    position: absolute;
+    text-align: center;
+    text-indent: 0 !important;
+    top: 50%;
+    width: 14px;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th.dtr-control:before {
+    content: '-';
+    background-color: #dc3545;
+}
+
+/* Estilos para las filas expandidas */
+table.dataTable.dtr-inline.collapsed > tbody > tr.child {
+    padding-left: 0.5em;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.child ul.dtr-details {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.child ul.dtr-details > li {
+    border-bottom: 1px solid #efefef;
+    padding: 0.5em 0;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.child ul.dtr-details > li:first-child {
+    padding-top: 0.5em;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.child ul.dtr-details > li:last-child {
+    border-bottom: none;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.child span.dtr-title {
+    display: inline-block;
+    font-weight: bold;
+    min-width: 75px;
+    margin-right: 10px;
+}
+
+/* Responsive breakpoints personalizados */
+@media screen and (max-width: 767px) {
+    table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
+    table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+        left: 8px;
+    }
+}

@@ -1,0 +1,47 @@
+/* Estilos adicionales para las tarjetas de menú */
+	.icon-shape {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		font-size: 1.5rem;
+	}
+
+	.border-left-primary {
+		border-left: 4px solid #004884 !important;
+	}
+
+	.border-left-success {
+		border-left: 4px solid #1cc88a !important;
+	}
+
+	.border-left-info {
+		border-left: 4px solid #36b9cc !important;
+	}
+
+	.border-left-warning {
+		border-left: 4px solid #f6c23e !important;
+	}
+
+	.border-left-danger {
+		border-left: 4px solid #e74a3b !important;
+	}
+	/* Aseguramos que las tarjetas tengan la misma altura */
+	.h-100 {
+		height: 100% !important;
+	}
+	a .card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+	}
+
+	/* Aseguramos que los enlaces no tienen el estilo por defecto */
+	a.text-decoration-none:hover {
+		text-decoration: none !important;
+	}
+
+	/* Ajustamos el tamaño de los iconos en los círculos */
+	.icon-shape i {
+		font-size: 22px;
+	}

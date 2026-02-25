@@ -1,0 +1,624 @@
+/**
+ * Estilos para componentes parciales de solicitudes - Admin
+ * Mejoras visuales y de comportamiento para _info.php, _forms.php, _menu.php, _observaciones.php
+ */
+
+:root {
+    --primary-color: #004884;
+    --secondary-color: #98BDFF;
+    --success-color: #57B657;
+    --danger-color: #FF4747;
+    --warning-color: #FFC100;
+    --info-color: #248AFD;
+    --light-color: #F8F9FA;
+    --dark-color: #444444;
+    --border-color: #EBEDF2;
+    --text-color: #3E4B5B;
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.15);
+    --shadow-strong: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ==============================================
+   COMPONENTE _INFO.PHP - Panel de información
+   ============================================== */
+
+.info-panel {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.info-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0961a8 100%);
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.info-header h3 i {
+    margin-right: 12px;
+    font-size: 1.3rem;
+}
+
+.info-toggle-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.info-toggle-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.info-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.info-content {
+    padding: 0;
+    display: none;
+    overflow: hidden;
+}
+
+.info-content.expanded {
+    display: block;
+    padding: 30px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 10px;
+}
+
+.info-section {
+    background: #f8f9fc;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.info-field {
+    margin-bottom: 15px;
+}
+
+.info-field label {
+    font-weight: 600;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.info-field .tipoLeer {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    width: 100%;
+    min-height: 20px;
+    display: block;
+}
+
+.info-field textarea.tipoLeer {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.info-actions {
+    background: #f8f9fc;
+    padding: 20px 30px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.info-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.info-btn-warning {
+    background: var(--warning-color);
+    color: white;
+}
+
+.info-btn-info {
+    background: var(--info-color);
+    color: white;
+}
+
+.info-btn-danger {
+    background: var(--danger-color);
+    color: white;
+}
+
+.info-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-light);
+}
+
+/* ==============================================
+   COMPONENTE _MENU.PHP - Menú flotante
+   ============================================== */
+
+.floating-menu-container {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.floating-menu-toggle {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-medium);
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.floating-menu-toggle:hover {
+    background: #0961a8;
+    transform: scale(1.1);
+    box-shadow: var(--shadow-strong);
+}
+
+.floating-menu-panel {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-strong);
+    padding: 20px;
+    min-width: 280px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+.floating-menu-panel.active {
+    max-height: 600px;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.floating-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.floating-menu-header h4 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.floating-menu-close {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.floating-menu-close:hover {
+    background: var(--light-color);
+    color: var(--danger-color);
+}
+
+.floating-menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.floating-menu-item {
+    background: #f8f9fc;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.floating-menu-item:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateX(5px);
+}
+
+.floating-menu-item i {
+    width: 16px;
+    text-align: center;
+}
+
+.floating-menu-action {
+    background: var(--success-color);
+    color: white;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.floating-menu-action:hover {
+    background: #4a9f4a;
+}
+
+/* ==============================================
+   COMPONENTE _FORMS.PHP - Formularios
+   ============================================== */
+
+.form-section {
+    border-bottom: 1px solid var(--border-color);
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+/* ==============================================
+   COMPONENTE _OBSERVACIONES.PHP - Modal
+   ============================================== */
+
+.modal-observaciones .modal-dialog {
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.modal-observaciones .modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: var(--shadow-strong);
+}
+
+.modal-observaciones .modal-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0961a8 100%);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    padding: 20px 30px;
+    border-bottom: none;
+}
+
+.modal-observaciones .modal-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.modal-observaciones .modal-body {
+    padding: 30px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.modal-observaciones .modal-footer {
+    background: #f8f9fc;
+    border-top: 1px solid var(--border-color);
+    padding: 20px 30px;
+    border-radius: 0 0 12px 12px;
+}
+
+.modal-observaciones .btn-close-modal {
+    background: var(--danger-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-observaciones .btn-close-modal:hover {
+    background: #e63946;
+    transform: translateY(-2px);
+}
+
+/* ==============================================
+   ARCHIVOS - Usado en observaciones.js
+   ============================================== */
+
+.archivo-tipo-grupo {
+    margin-bottom: 25px;
+}
+
+.archivo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e3e6f0;
+    transition: all 0.3s ease;
+}
+
+.archivo-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.archivo-item.archivo-revisado {
+    background: #f8fff8;
+    border-color: #28a745;
+}
+
+.archivo-item.archivo-pendiente {
+    background: #fff8f0;
+    border-color: #ffc107;
+}
+
+.archivo-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.archivo-icono {
+    font-size: 24px;
+    color: #6c757d;
+}
+
+.archivo-detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.archivo-nombre {
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.archivo-nombre:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.archivo-estado {
+    color: #6c757d;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.archivo-acciones {
+    display: flex;
+    align-items: center;
+}
+
+/* ==============================================
+   FORMULARIOS DE OBSERVACIÓN
+   ============================================== */
+
+.formulario-observacion-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.formulario-observacion .form-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+}
+
+.formulario-observacion .form-control {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.formulario-observacion .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 72, 132, 0.1);
+    outline: none;
+}
+
+.btn-observacion {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-observacion:hover {
+    background: #003366;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-light);
+    color: white;
+}
+
+.btn-observacion:active {
+    transform: translateY(0);
+}
+
+/* Mensaje cuando no hay observaciones */
+.observaciones-empty-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-color);
+    font-style: italic;
+    background: #f8f9fc;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 2px dashed var(--border-color);
+}
+
+.observaciones-empty-message i {
+    font-size: 2rem;
+    color: var(--border-color);
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ==============================================
+   UTILIDADES Y ANIMACIONES
+   ============================================== */
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==============================================
+   RESPONSIVE
+   ============================================== */
+
+@media (max-width: 768px) {
+    .floating-menu-container {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-bottom: 20px;
+    }
+    
+    .floating-menu-panel {
+        min-width: 100%;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .info-actions {
+        flex-direction: column;
+    }
+    
+    .info-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .modal-observaciones .modal-dialog {
+        margin: 15px;
+        max-width: none;
+    }
+    
+    .archivo-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .archivo-acciones {
+        align-self: flex-end;
+    }
+    
+    .formulario-observacion-container {
+        padding: 20px;
+        margin: 15px 0;
+    }
+    
+    .btn-observacion {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-header {
+        padding: 15px 20px;
+    }
+    
+    .info-content.expanded {
+        padding: 20px;
+    }
+    
+    .info-section {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,63 @@
+/* Estilo del Popover Driver.js acorde al Front SIIA */
+.driver-popover {
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  border-top: 4px solid #09476E;
+  max-width: 420px;
+  overflow: hidden;
+}
+.driver-popover .driver-popover-title {
+  font-weight: 700;
+  color: #09476E;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.driver-popover .driver-popover-description {
+  color: #333;
+  line-height: 1.45;
+}
+.driver-popover .driver-popover-description img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: .5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+/* Footer y botones */
+.driver-popover .driver-popover-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.driver-popover .driver-popover-footer .driver-popover-btn {
+  border-radius: 6px;
+  padding: .4rem .75rem;
+  font-weight: 600;
+}
+.driver-popover .driver-popover-next-btn,
+.driver-popover .driver-popover-done-btn {
+  background: #09476E;
+  border: 1px solid #09476E;
+  color: #fff;
+}
+.driver-popover .driver-popover-prev-btn {
+  background: #f5f7fb;
+  border: 1px solid #cfd8dc;
+  color: #09476E;
+}
+.driver-popover .driver-popover-close-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+}
+/* Progreso */
+.driver-popover .driver-popover-progress-text {
+  font-size: .85rem;
+  color: #666;
+}
+/* Overlay */
+.driver-overlay {
+  backdrop-filter: blur(1px);
+}

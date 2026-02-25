@@ -1,0 +1,209 @@
+/* Estilos consolidados para módulos super */
+
+/* Iconos de estadísticas */
+.icon-shape {
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.25rem;
+}
+
+/* Fondos de colores claros para iconos */
+.bg-primary-light {
+	background-color: rgba(78, 115, 223, 0.1) !important;
+}
+
+.bg-success-light {
+	background-color: rgba(28, 200, 138, 0.1) !important;
+}
+
+.bg-warning-light {
+	background-color: rgba(246, 194, 62, 0.1) !important;
+}
+
+.bg-info-light {
+	background-color: rgba(54, 185, 204, 0.1) !important;
+}
+
+/* Bordes laterales de colores */
+.border-left-primary {
+	border-left: 0.25rem solid #4e73df !important;
+}
+
+.border-left-success {
+	border-left: 0.25rem solid #1cc88a !important;
+}
+
+.border-left-warning {
+	border-left: 0.25rem solid #f6c23e !important;
+}
+
+.border-left-info {
+	border-left: 0.25rem solid #36b9cc !important;
+}
+
+/* Estilos de tabla */
+.table-hover tbody tr:hover {
+	background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Estilos de badges */
+.badge {
+	font-size: 0.75em;
+}
+
+/* Bordes redondeados consistentes */
+.card {
+	border-radius: 0.35rem;
+}
+
+.btn {
+	border-radius: 0.35rem;
+}
+
+.form-control {
+	border-radius: 0.35rem;
+}
+
+.modal-content {
+	border-radius: 0.5rem;
+}
+
+/* Tipografía */
+.text-xs {
+	font-size: 0.7rem;
+}
+
+.font-weight-bold {
+	font-weight: 700 !important;
+}
+
+.text-gray-800 {
+	color: #5a5c69 !important;
+}
+
+/* Estilos específicos para emails */
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+/* Estilos para botones de DataTables */
+.dt-buttons {
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.dt-button {
+	margin: 0 0.25rem 0.5rem 0;
+	border-radius: 0.35rem !important;
+	font-weight: 500;
+	padding: 0.5rem 1rem;
+	transition: all 0.2s ease-in-out;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dt-button:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.dt-button.btn-primary {
+	background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+	border: none;
+}
+
+.dt-button.btn-success {
+	background: linear-gradient(45deg, #56ab2f 0%, #a8e6cf 100%);
+	border: none;
+}
+
+.dt-button.btn-danger {
+	background: linear-gradient(45deg, #ff416c 0%, #ff4b2b 100%);
+	border: none;
+}
+
+.dt-button.btn-info {
+	background: linear-gradient(45deg, #2196F3 0%, #21CBF3 100%);
+	border: none;
+}
+
+.dt-button.btn-secondary {
+	background: linear-gradient(45deg, #6c757d 0%, #495057 100%);
+	border: none;
+}
+
+.dt-button.btn-outline-secondary {
+	border: 2px solid #6c757d;
+	color: #6c757d;
+	background: transparent;
+}
+
+.dt-button.btn-outline-primary {
+	border: 2px solid #667eea;
+	color: #667eea;
+	background: transparent;
+}
+
+.dt-button.btn-outline-secondary:hover,
+.dt-button.btn-outline-primary:hover {
+	color: white;
+	background: #6c757d;
+}
+
+/* Mejorar el dropdown de botones */
+.dt-button-collection {
+	border-radius: 0.5rem !important;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+	border: none !important;
+}
+
+.dt-button-collection .dt-button {
+	width: 100%;
+	text-align: left;
+	margin: 0;
+	border-radius: 0;
+	border: none;
+	padding: 0.75rem 1.25rem;
+}
+
+.dt-button-collection .dt-button:hover {
+	transform: none;
+	box-shadow: none;
+}
+
+/* Responsive para botones */
+@media (max-width: 768px) {
+	.dt-buttons {
+		text-align: center;
+	}
+	
+	.dt-button {
+		margin: 0.25rem;
+		padding: 0.4rem 0.8rem;
+		font-size: 0.875rem;
+	}
+}
+
+/* Mejorar la tabla agrupada */
+tr.group {
+	background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%) !important;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+tr.group:hover {
+	background: linear-gradient(45deg, #e9ecef 0%, #dee2e6 100%) !important;
+	transform: scale(1.01);
+}
+
+tr.group td {
+	padding: 1rem !important;
+	border-top: 2px solid #dee2e6 !important;
+	border-bottom: 2px solid #dee2e6 !important;
+}

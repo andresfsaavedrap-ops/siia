@@ -1,0 +1,169 @@
+/* Estilos para la vista de asignación de solicitudes */
+
+/* Iconos circulares */
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Fondos de colores suaves */
+.bg-primary-light {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.bg-success-light {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.bg-warning-light {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.bg-info-light {
+    background-color: rgba(23, 162, 184, 0.1);
+}
+
+.bg-danger-light {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Celda de motivo con tooltip */
+.motivo-cell {
+    max-width: 200px;
+    cursor: help;
+}
+
+/* Estilos para las pestañas */
+.nav-tabs .nav-link {
+    border: none;
+    color: #6c757d;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+}
+
+.nav-tabs .nav-link.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+    color: #007bff;
+}
+
+/* Badges en las pestañas */
+.nav-tabs .badge {
+    font-size: 0.75rem;
+}
+
+/* Estados vacíos */
+.empty-state {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.empty-state .icon-circle {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+}
+
+.empty-state i {
+    font-size: 2rem;
+}
+
+/* Modal mejorado */
+.modal-header.bg-primary {
+    border-bottom: none;
+}
+
+.modal-content {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-detalle .section-title {
+    font-weight: 600;
+    color: #495057;
+}
+
+.detail-card {
+    background: #f8f9fa;
+    border-radius: .35rem;
+    padding: .75rem;
+}
+
+.modal-detalle .badge {
+    font-size: 0.8rem;
+}
+
+/* Tarjetas de estadísticas */
+.card {
+    border: 1px solid #e3e6f0;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nav-tabs .nav-link {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .nav-tabs .nav-link i {
+        display: none;
+    }
+    
+    .table-responsive {
+        font-size: 0.8rem;
+    }
+    
+    .motivo-cell {
+        max-width: 150px;
+    }
+
+    /* Ocultar columnas específicas en pantallas pequeñas */
+    th.col-hide-sm,
+    td.col-hide-sm {
+        display: none !important;
+    }
+
+    /* Detalles expandibles en móvil */
+    .details-row td {
+        background: #f8f9fa;
+        border-top: none;
+    }
+}
+
+/* Animaciones suaves */
+.tab-pane {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effects */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}

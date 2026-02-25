@@ -1,0 +1,8 @@
+.border-left-info { border-left: 4px solid #17a2b8; }
+.border-left-primary { border-left: 4px solid #007bff; }
+.border-left-warning { border-left: 4px solid #ffc107; }
+.text-area-ext { min-height: 80px; max-height: 140px; overflow-y: auto; }
+#tabla_informes .btn { margin-bottom: 6px; }
+#tabla_informes .badge { font-size: 0.85rem; }
+#tabla_informes .table thead th { border: 0; }
+#tabla_informes .table th, #tabla_informes .table td { text-align: center; vertical-align: middle; }

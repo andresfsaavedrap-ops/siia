@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /admin/
+Allow: /
+
+Sitemap: http://acreditacion.orgsolidarias.gov.co/sitemap.xml
