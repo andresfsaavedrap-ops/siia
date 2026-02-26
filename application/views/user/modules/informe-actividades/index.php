@@ -20,7 +20,7 @@ $CI->load->model("InformeActividadesModel");
 	<div class="content-wrapper">
 		<div class="row">
 			<!-- Tabla de cursos registrados -->
-			<?= $this->load->view('user/modules/informe-actividades/partials/_informes'); ?>
-			<?= $this->load->view('user/modules/informe-actividades/partials/_crear_informe'); ?>
+			<?php $this->load->view('user/modules/informe-actividades/partials/_informes'); ?>
+			<?php $this->load->view('user/modules/informe-actividades/partials/_crear_informe'); ?>
 		</div>
 	</div>

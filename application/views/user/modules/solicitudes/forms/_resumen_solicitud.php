@@ -69,5 +69,5 @@ return null; */
 		</div>
 	</div>
 	<!-- Botones de navegación -->
-	<?= $this->load->view('user/modules/solicitudes/partials/_botones_navegacion_forms'); ?>
+	<?php $this->load->view('user/modules/solicitudes/partials/_botones_navegacion_forms'); ?>
 </div>

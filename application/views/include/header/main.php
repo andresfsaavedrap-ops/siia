@@ -86,7 +86,7 @@ echo "</pre>";*/
 	<?php endif; ?>
 </head>
 <!-- JS Inject -->
-<?= $this->load->view('include/partial/libraries'); ?>
+<?php $this->load->view('include/partial/libraries'); ?>
 <body class="nav-md sidebar-icon-only sidebar-fixed">
 	<div class="container-scroller">
 		<div class="se-pre-con"></div>

@@ -16,7 +16,7 @@ $CI = &get_instance();
 <div class="main-panel">
 	<div class="content-wrapper">
 		<div class="row">
-			<?= $this->load->view('user/modules/solicitudes/partials/_tabla_solicitudes'); ?>
-			<?= $this->load->view('user/modules/solicitudes/partials/_formulario_creacion_solicitud'); ?>
+			<?php $this->load->view('user/modules/solicitudes/partials/_tabla_solicitudes'); ?>
+			<?php $this->load->view('user/modules/solicitudes/partials/_formulario_creacion_solicitud'); ?>
 		</div>
 	</div>

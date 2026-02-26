@@ -17,10 +17,10 @@ return null;*/
 	<div class="content-wrapper">
 		<div class="row">
 			<?php if(!$informacionGeneral): ?>
-				<?= $this->load->view('user/modules/solicitudes/partials/_alerta_informacion_general'); ?>
+				<?php $this->load->view('user/modules/solicitudes/partials/_alerta_informacion_general'); ?>
 			<?php else: ?>
-				<?= $this->load->view('user/modules/docentes/partials/_agregar_docente'); ?>
-				<?= $this->load->view('user/modules/docentes/partials/_docentes'); ?>
+				<?php $this->load->view('user/modules/docentes/partials/_agregar_docente'); ?>
+				<?php $this->load->view('user/modules/docentes/partials/_docentes'); ?>
 			<?php endif; ?>
 		</div>
 	</div>

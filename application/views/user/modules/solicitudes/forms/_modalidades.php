@@ -197,7 +197,7 @@ if (isset($datosModalidades) && is_array($datosModalidades)) {
 		<?php endif ?>
 	</div>
 	<!-- Botones de navegación -->
-	<?= $this->load->view('user/modules/solicitudes/partials/_botones_navegacion_forms'); ?>
+	<?php $this->load->view('user/modules/solicitudes/partials/_botones_navegacion_forms'); ?>
 </div>
 <!-- Formulario de programas de educación en economía solidaria - FIN -->
 <!-- Modal Modalidad Presencial -->

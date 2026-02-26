@@ -73,7 +73,7 @@ return null;*/
 		</button>
 	</div>
 	<!-- Botones de navegación -->
-	<?= $this->load->view('user/modules/solicitudes/partials/_botones_navegacion_forms'); ?>
+	<?php $this->load->view('user/modules/solicitudes/partials/_botones_navegacion_forms'); ?>
 </div>
 <!-- Agrega este script para funcionalidad básica -->
 <script>

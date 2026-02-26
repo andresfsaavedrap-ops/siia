@@ -145,7 +145,7 @@ return null; */
 		</div>
 	<?php endif; ?>
 	<!-- Botones de navegación -->
-	<?= $this->load->view('user/modules/solicitudes/partials/_botones_navegacion_forms'); ?>
+	<?php $this->load->view('user/modules/solicitudes/partials/_botones_navegacion_forms'); ?>
 </div>
 <!-- Modal Aceptar Modalidad Virtual -->
 <div class="modal fade" id="modalAceptarVirtual" tabindex="-1" role="dialog" aria-labelledby="modalAceptarVirtual">

@@ -415,6 +415,6 @@ return null; */
 		</button>
 	</div>
 	<!-- Botones de navegación -->
-	<?= $this->load->view('user/modules/solicitudes/partials/_botones_navegacion_forms'); ?>
+	<?php $this->load->view('user/modules/solicitudes/partials/_botones_navegacion_forms'); ?>
 </div>
 <script src="<?= base_url('assets/js/functions/user/modules/solicitudes/formularios/formulario_1.js?v=1.2.1') . time() ?>" type="module"></script>
