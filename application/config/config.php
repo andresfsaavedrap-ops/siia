@@ -23,7 +23,7 @@ date_default_timezone_set('America/Bogota');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://acreditacion.unidadsolidaria.gov.co/siia/';
+$config['base_url'] = 'http://localhost:8080/';
 
 $config['mantenimiento'] = FALSE;
 
@@ -404,9 +404,9 @@ $config['sess_regenerate_destroy'] = FALSE;
 |
 */
 $config['cookie_prefix']	= '';
-$config['cookie_domain']	= 'acreditacion.unidadsolidaria.gov.co';
-$config['cookie_path']		= '/; SameSite=None';
-$config['cookie_secure']	= TRUE;
+$config['cookie_domain']	= '';
+$config['cookie_path']		= '/';
+$config['cookie_secure']	= FALSE;
 $config['cookie_httponly'] 	= TRUE;
 
 /*
